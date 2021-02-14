@@ -38,6 +38,12 @@ dependencies {
     //Serialization
     implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.0.0")
     implementation("org.jetbrains.kotlinx:kotlinx-serialization-core:1.0.0")
+
+    //Testing
+    testImplementation(kotlin("test-js"))
+    testImplementation(npm("enzyme", "3.11.0"))
+    testImplementation(npm("enzyme-adapter-react-16", "1.15.6"))
+
 }
 
 kotlin {
@@ -59,5 +65,6 @@ kotlin {
             }
         }
         binaries.executable()
+        useCommonJs()
     }
 }

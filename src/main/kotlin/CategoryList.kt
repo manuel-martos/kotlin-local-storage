@@ -12,6 +12,7 @@ external interface CategoryListState : LocalStoreState {
     var selectedCategory: Category?
 }
 
+@JsExport
 class CategoryList : LocalStoreComponent<CategoryListProps, CategoryListState>() {
     override fun CategoryListState.init() {
         selectedCategory = register("selectedCategory") { state.selectedCategory }
